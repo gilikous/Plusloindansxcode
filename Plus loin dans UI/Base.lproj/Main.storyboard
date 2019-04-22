@@ -29,14 +29,31 @@
         <!--Item 1-->
         <scene sceneID="RZJ-of-sDe">
             <objects>
-                <viewController id="K1F-cu-0VQ" sceneMemberID="viewController">
+                <viewController id="K1F-cu-0VQ" customClass="CycleEtFrameController" customModule="Plus_loin_dans_UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eMi-pk-vAa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qAx-A6-5q1">
+                                <rect key="frame" x="60" y="104" width="294" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="f9h-9g-ktE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.43849887459999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kgn-PG-nzU" firstAttribute="trailing" secondItem="qAx-A6-5q1" secondAttribute="trailing" constant="60" id="93l-Bq-eTe"/>
+                            <constraint firstItem="qAx-A6-5q1" firstAttribute="leading" secondItem="Kgn-PG-nzU" secondAttribute="leading" constant="60" id="RD2-hg-pk3"/>
+                            <constraint firstItem="qAx-A6-5q1" firstAttribute="top" secondItem="Kgn-PG-nzU" secondAttribute="top" constant="60" id="tU2-3c-fXh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Kgn-PG-nzU"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="HKY-GV-k2I"/>
+                    <connections>
+                        <outlet property="viewFrameEtBound" destination="qAx-A6-5q1" id="dC7-3e-08T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHK-yE-Whe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
