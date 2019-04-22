@@ -13,6 +13,9 @@ class ProgrammatiqueController: UIViewController {
     var monPremierUIview: UIView?
     var monPremierLabel: UILabel?
     var monPremierUIButton: UIButton?
+    var monPremierUIImageView: UIImageView?
+    
+    
     
     
     override func viewDidLoad() {
@@ -45,6 +48,13 @@ class ProgrammatiqueController: UIViewController {
         
         monPremierUIButton?.addTarget(self, action: #selector(boutonAppuyer), for: .touchUpInside)
         
+        let largeur = view.frame.width - 60
+        let tailleImageView = CGRect(x: view.frame.width / 2 - largeur, y: view.frame.width - 30 , width: largeur, height: largeur)
+        monPremierUIImageView = UIImageView(frame: tailleImageView)
+        monPremierUIImageView?.image = UIImage(named: "logo")
+        monPremierUIImageView?.contentMode = .scaleAspectFill
+        monPremierUIImageView?.clipsToBounds = true
+        view.addSubview(monPremierUIImageView!)
         
         }
     
