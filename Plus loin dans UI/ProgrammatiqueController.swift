@@ -10,6 +10,7 @@ import UIKit
 
 class ProgrammatiqueController: UIViewController {
 
+    @IBOutlet weak var scroll: UIScrollView!
     var monPremierUIview: UIView?
     var monPremierLabel: UILabel?
     var monPremierUIButton: UIButton?
@@ -24,7 +25,7 @@ class ProgrammatiqueController: UIViewController {
         monPremierUIview?.backgroundColor = UIColor(displayP3Red: 30/255, green: 123/255, blue: 90/255, alpha: 1)
         monPremierUIview?.layer.cornerRadius = 25
         guard monPremierUIview != nil  else{return}
-            view.addSubview(monPremierUIview!)
+            scroll.addSubview(monPremierUIview!)
        
         
         monPremierLabel = UILabel(frame: CGRect(x: 0, y: monPremierUIview!.frame.maxY +  20, width: view.frame.width, height: 50))
@@ -33,7 +34,7 @@ class ProgrammatiqueController: UIViewController {
         monPremierLabel?.textColor = UIColor.white
         monPremierLabel?.font = UIFont(name: "Chalkduster", size: 20)
         monPremierLabel?.textAlignment = NSTextAlignment.center
-        view.addSubview(monPremierLabel!)
+        scroll.addSubview(monPremierLabel!)
         
         
         let rectDeMonButton = CGRect(x: view.frame.width/2-75, y: monPremierLabel!.frame.maxY + 20, width: 150, height: 40)
@@ -44,7 +45,7 @@ class ProgrammatiqueController: UIViewController {
         monPremierUIButton?.backgroundColor = UIColor.black
         monPremierUIButton?.layer.borderColor = UIColor.white.cgColor
         monPremierUIButton?.layer.borderWidth = 2
-        view.addSubview(monPremierUIButton!)
+        scroll.addSubview(monPremierUIButton!)
         
         monPremierUIButton?.addTarget(self, action: #selector(boutonAppuyer), for: .touchUpInside)
         
@@ -54,8 +55,21 @@ class ProgrammatiqueController: UIViewController {
         monPremierUIImageView?.image = UIImage(named: "logo")
         monPremierUIImageView?.contentMode = .scaleAspectFill
         monPremierUIImageView?.clipsToBounds = true
-        view.addSubview(monPremierUIImageView!)
+        scroll.addSubview(monPremierUIImageView!)
         
+        
+        let couleurs: [UIColor] = [.red, .blue, .black, .white]
+        var maximum: CGFloat = (monPremierUIImageView!.frame.maxY)
+        
+        for couleur in couleurs
+        {
+        let vue = UIView(frame: CGRect(x: 0, y: maximum + 10, width: 100, height: 100))
+        vue.backgroundColor = couleur
+            scroll.addSubview(vue)
+            maximum = vue.frame.maxY
+        }
+        
+        scroll.contentSize = CGSize(width: view.frame.width, height: maximum + 100 )
         }
     
     

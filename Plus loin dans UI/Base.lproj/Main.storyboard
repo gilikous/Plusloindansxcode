@@ -17,10 +17,24 @@
                     <view key="view" contentMode="scaleToFill" id="dim-yy-LBZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kl8-MW-ENx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="0.64397713720000005" green="0.36525471469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qrS-hj-jLE" firstAttribute="bottom" secondItem="kl8-MW-ENx" secondAttribute="bottom" id="2cO-wO-tJE"/>
+                            <constraint firstItem="kl8-MW-ENx" firstAttribute="top" secondItem="qrS-hj-jLE" secondAttribute="top" id="A35-gP-kN4"/>
+                            <constraint firstItem="kl8-MW-ENx" firstAttribute="leading" secondItem="qrS-hj-jLE" secondAttribute="leading" id="eJO-KA-5Tw"/>
+                            <constraint firstItem="qrS-hj-jLE" firstAttribute="trailing" secondItem="kl8-MW-ENx" secondAttribute="trailing" id="rD4-me-bMj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qrS-hj-jLE"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="m9l-bb-goT"/>
+                    <connections>
+                        <outlet property="scroll" destination="kl8-MW-ENx" id="6uJ-np-2Pg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFc-mq-Jgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
