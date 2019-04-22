@@ -30,8 +30,9 @@ class CycleEtFrameController: UIViewController {
         print("Frame -> : \(viewFrameEtBound.bounds)")
         
         UIView.animate(withDuration: 2, animations: { self.viewFrameEtBound.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi)/82 )}, completion: { (success) in
-            <#code#>
-            }})
+            print("Frame -> : \(self.viewFrameEtBound.frame)")
+            print("Bounds -> : \(self.viewFrameEtBound.bounds)")
+            })
     }
      
     override func viewWillDisappear(_ animated: Bool) {

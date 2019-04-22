@@ -13,7 +13,7 @@
         <!--Item 2-->
         <scene sceneID="cO0-nZ-JCi">
             <objects>
-                <viewController id="DZ7-zc-nrX" sceneMemberID="viewController">
+                <viewController id="DZ7-zc-nrX" customClass="ProgrammatiqueController" customModule="Plus_loin_dans_UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dim-yy-LBZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
